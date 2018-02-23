@@ -9,10 +9,10 @@ Our week 6 capstone project asks us to create a portfolio website that can be sh
 
 - [ ] Build the document structure
 	- [ ] Create a main page (index.html) representing a professional portfolio, including the following:
-		- [ ] an appropriate <header> element
-		- [ ] a <nav> element linking to each of the sections
-		- [ ] an <h1> element with your page title (there can be only one)
-		- [ ] a <section> element for each of the following, each of which should contain an appropriate heading element:
+		- [ ] an appropriate `<header>` element
+		- [ ] a `<nav>` element linking to each of the sections
+		- [ ] an `<h1>` element with your page title (there can be only one)
+		- [ ] a `<section>` element for each of the following, each of which should contain an appropriate heading element:
 	- [ ] About Me, consisting of:
 		- [ ] brief biographical information
 		- [ ] photo
@@ -20,14 +20,14 @@ Our week 6 capstone project asks us to create a portfolio website that can be sh
 		- [ ] links to your professional networking site profiles, including at least GitHub and LinkedIn
 		- [ ] list of skills
 	- [ ] Include whatever other information you consider pertinent.
-	- [ ] Projects, consisting of at least three, each represented as an <article>
+	- [ ] Projects, consisting of at least three, each represented as an `<article>`
 		- [ ] name of project, linked to GitHub repository or the repository/project’s GitHub Pages
 screenshot
 		- [ ] skills / technologies used
-	- [ ] an appropriate <footer> element
+	- [ ] an appropriate `<footer>` element
 - [ ] Lay out and style your portfolio
 	- [ ] Assign ids/classes to sections/etc, then use css grid to lay out your page. Reference MDN and this tutorial to work out how to use grid: http://cssgridgarden.com/
-	- [ ] To contain the elements of your grid, you will want to create a <div>, something like <div id="container">...</div>.
+	- [ ] To contain the elements of your grid, you will want to create a `<div>`, something like `<div id="container">...</div>`.
 	- [ ] Create CSS rules to style page elements appropriately.
 
 ## Rubric
