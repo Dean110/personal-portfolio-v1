@@ -1,33 +1,32 @@
-.container{
+a:link {
+	color:black;
+	text-decoration: none;
+}
+
+a:visited {
+	color:black;
+}
+
+a:hover {
+	color:forestgreen;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
 	background-color: lightgrey;
+	font-family: 'Poppins', sans-serif;
+	background-color: whitesmoke;
 }
-header{
-	background-color: grey;
+
+h1 {
+	font-family: 'Krona One', sans-serif;
+	font-size: 48px;
 }
-.header-nav{
-	background-color: lightsalmon;
+
+.project-title {
+	font-size: 24px
 }
-.nav-link{
-	background-color: salmon;
-}
-article{
-	background-color: yellow;
-}
-.about-picture{
-	background-color: AliceBlue;
-}
-.ben-bio{
-	background-color: AntiqueWhite;
-}
-footer{
-	background-color: gold;
-}
-.footer-links{
-	background-color: greenyellow;
-}
-.footer-link{
-	background-color: goldenrod;
-}
-.copyright{
-	background-color: khaki;
-}
+

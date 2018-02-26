@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Personal Portfolio for Ben Williams">
-  <meta name="author" content="Ben Williams">
-  <title>About Ben</title>
-  <link href="./css/styles.css" rel="stylesheet">
-  <link href="./css/layout.css" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Personal Portfolio for Ben Williams">
+	<meta name="author" content="Ben Williams">
+	<title>About Ben</title>
+	<link href="https://fonts.googleapis.com/css?family=Krona+One|Poppins" rel="stylesheet">
+	<link href="./css/styles.css" rel="stylesheet">
+	<link href="./css/layout.css" rel="stylesheet">
 </head>
 
 
@@ -21,20 +22,82 @@
 			<h1>Ben Williams</h1>
 		</header>
 		<nav class="header-nav">
-			<ul>
-				<li class="nav-link">about</li>
-				<li class="nav-link">work</li>
-				<li class="nav-link">heatmap</li>
-				<li class="nav-link">bicycles</li>
-				<li class="nav-link">projects</li>
+			<ul class="nav-links">
+				<li class="nav-link"><a href="#about-me">about</a></li>
+				<li class="nav-link"><a href="#projects">projects</a></li>
 			</ul>
 		</nav>
-		<article>
-			<figure class="about-picture">
-				<img src="./images/YoungBen.jpg" alt="A picture of Ben"/>
-			</figure>
-			<p class="ben-bio">Stuff about Ben and his life so far.<p>
-		</article>
+		<div class="main-content">
+			<article class="about-me" id="about-me">
+				<section class="ben-bio">
+					<h2>My name is Ben,</h2>
+					<p>I am software developement apprentice at We Can Code IT. It has been a long journey for me to get to this point.  Many years were spent in the kitchens of Columbus plying the trade of a journeyman chef. Before that I studied music at Ohio University. My background taught me the importance of practicing a skill until it becomes second nature. I believe that once you have mastered the basics of a skill you can focus on creativity. I work everyday to improve how I write code and to learn new things that will bring me one step closer to mastering the craft of software development.</p>
+				</section>
+				<figure class="about-picture">
+					<img src="./images/ben-final.jpg" alt="A picture of Ben"/>
+				</figure>				
+				<section class="skills">
+					<ul class="skills-list">
+						<h3>Here are a few of my skills</h3>
+						<li class="skill">Java</li>
+						<li class="skill">TDD</li>
+						<li class="skill">Spring</li>
+						<li class="skill">JavaScript</li>
+						<li class="skill">HTML5</li>
+						<li class="skill">CSS3</li>
+						<li class="skill">Object-Oriented Programming</li>
+						<li class="skill">Bike Riding</li>
+					</ul>
+				</section>
+				<section class="contact">You can browse my GitHub account at <a class="about-me-link" href="https://github.com/Dean110">https://github.com/Dean110</a> and my LinkedIn profile at <a class="about-me-link" href="https://linkedin.com/in/benjamin-williams-110">linkedin.com/in/benjamin-williams-110</a>.
+				</section>
+			</article>
+			<article class="projects" id="projects">
+				<section class="project project-1">
+					<h2 class="project-title">Virtual-Pets-Amok
+						<a class="github-link" href="https://github.com/Dean110/virtual-pets-amok" target="_blank">
+							<img src="./images/GitHub32.png" alt="GitHub Icon"/>
+						</a>
+					</h2>
+					<p class="project-description">Our week four focus was on OOP principles. We covered Polymorphism, Inheritance, and Encapsulation. Our project aims to test our knowledge of these topics by expanding on the previous two weeks work and building a shelter that has four different styles of virtual pets. Organic pets are joined by robotic brethern, cats and dogs are now making a mess of the shelter. Differences between cats and dogs are simple, you can walk dogs, cats use the litter box, and dogs stay in their cage. All pets will have a health attribute that diminishes according to cleanliness of their living area, if their happiness drops too low, or if they have other needs that have not been met.</p>
+					<ul class="project-skills">
+						<h4>Skills used:</h4>
+						<li class="project-skill">Java</li>
+						<li class="project-skill">Object-Oriented Programing</li>
+						<li class="project-skill">Test Driven Development</li>
+						<li class="project-skill">Team Collaboration</li>
+					</ul>
+				</section>
+				<section class="project project-2">
+					<h3 class="project-title">Virtual-Pet-Shelter
+						<a class="github-link" href="https://github.com/Dean110/virtual-pet-shelter" target="_blank">
+							<img src="./images/GitHub32.png" alt="GitHub Icon"/>
+						</a>
+					</h3>
+					<p class="project-description">This project built upon our week 2 project, Virtual Pet. After a week of learning about array lists and shopping carts, building shopping carts and bank tellers, and diving further into TDD by expanding our knowledge of unit testing frameworks to include Hamcrest, we finally get to put the skills to test building a virtual pet shelter. For this project I wanted to add a few of the stretch goals and turn in a project that was more than the bare requirements. Our shelter starts with a sad story of a circus leaving its dogs behind to roam the streets and we take one in. Once we get started we can get more dogs, send them to live with a family, feed or water all pets, and play with the dogs. We can care for as many dogs as we can handle, but if they get too needy, the state might come in and shut down our operation. We need to get those dogs off the streets!</p>
+					<ul class="project-skills">
+						<h4>Skills used:</h4>
+						<li class="project-skill">Java</li>
+						<li class="project-skill">Test Driven Development</li>
+						<li class="project-skill">Multiple Classes</li>
+					</ul>
+				</section>
+				<section class="project project-3">
+					<h3 class="project-title">Virtual-Pet
+						<a class="github-link" href="https://github.com/Dean110/virtual-pet" target="_blank">
+							<img src="./images/GitHub32.png" alt="GitHub Icon"/>
+						</a>
+					</h3>
+					<p class="project-description">The project asks to create a virtual pet application akin to the Tamagotchi or DigiPet. We were tasked to create a virtual pet class and load it with instance variables and methods. We were also asked to create a game loop in the main method to represent the passing of time. The exit for the loop in my project is when the needs of the pet hit critical levels and bad things happen to them. </p>
+					<ul class="project-skills">
+						<h4>Skills used:</h4>
+						<li class="project-skill">Java</li>
+						<li class="project-skill">Test Driven Development</li>
+						<li class="project-skill">Class Design</li>
+					</ul>
+				</section>
+			</article>
+		</section>		
 		<footer>
 			<section class="footer-links">
 				<a class="footer-link" href="https://github.com/Dean110">
@@ -49,5 +112,5 @@
 			</section>
 			<section class="copyright">Copyright 2018</section>
 		</footer>
-</body>
-</html>
+	</body>
+	</html>
