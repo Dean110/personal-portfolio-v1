@@ -1,6 +1,35 @@
-# Professional Portfolio
+# Professional Portfolio ver. 2.0
 
 ## Overview
+Our week 8 capstone project was to take our week 6 capstone project (see below) and update it with some JavaScript features.  After a week of learning JavaScript we are going to focus on how to modify the content of our portfolio with JavaScript and user input.
+
+## Tasks
+- [ ] Add an image carousel.
+	- [ ] Screenshots of my projects.
+	- [ ] Images link to the projects.
+- [ ] Add a button for navigation that will toggle visibility of the site navigation elements.
+- [ ] Add a button and collapable description to your projects.
+	- [ ] When the button is clicked the descriptions expand.
+	- [ ] When the expanded description is clicked it collapses.
+- [ ] Create a modal box that pops up with your bio info when a button is pressed. 
+
+## Rubric
+Category|Max Score
+--------|---------
+All previous requirements met|10
+Proper variable names and variable keywords|10
+Properly declared event listeners|10
+Proper function declaration|10
+Image carousel|10
+Navigation menu button|10
+Collapsable descriptions|10
+Modal box for bio information|10
+TDD|10
+Style, Formatting, and Code Quality|10
+
+# Professional Portfolio ver 1.0
+## Overview
+
 Our week 6 capstone project asks us to create a portfolio website that can be shared with potential employers.  Focus is put on building a good structure, then adding style and layout with CSS.
 >Create a portfolio site highlighting your work that can be shared with potential employers. Focus first on building a good structure, then later style and lay out with with CSS.
 
