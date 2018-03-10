@@ -18,6 +18,9 @@ header{
 	justify-content: flex-end;
 	align-items: flex-end;
 }
+.nav-item.hidden{
+	visibility: hidden;
+}
 
 .header-nav{
 	grid-column: 1/-1;
