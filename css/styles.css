@@ -15,6 +15,13 @@ ul {
 	list-style: none;
 }
 
+.nav-item.hidden{
+	visibility: hidden;
+}
+.nav-item.nav-link{
+	background-color: red;
+transition-duration: .2s;
+}
 .container {
 	background-color: lightgrey;
 	font-family: 'Poppins', sans-serif;

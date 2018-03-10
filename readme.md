@@ -7,7 +7,7 @@ Our week 8 capstone project was to take our week 6 capstone project (see below) 
 - [ ] Add an image carousel.
 	- [ ] Screenshots of my projects.
 	- [ ] Images link to the projects.
-- [ ] Add a button for navigation that will toggle visibility of the site navigation elements.
+- [x] Add a button for navigation that will toggle visibility of the site navigation elements.
 - [ ] Add a button and collapable description to your projects.
 	- [ ] When the button is clicked the descriptions expand.
 	- [ ] When the expanded description is clicked it collapses.

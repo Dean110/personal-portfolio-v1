@@ -1,3 +1,4 @@
+
 function displayMenu(element){
 	if(element.length){
 		element.forEach(function(item){
