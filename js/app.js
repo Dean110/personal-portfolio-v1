@@ -16,6 +16,16 @@ function displayMenu(element){
 		}
 	}
 };
-document.querySelector('.nav-item.hamburger-button').addEventListener("click", function(){
-  displayMenu(document.querySelectorAll('.nav-item.nav-link'))
-});
+function carouselShift(carouselItemList, direction){
+	carouselItemList.forEach(function(carouselItem){
+		if (carouselItem.className.includes('left-edge')){
+			carouselItem.className = carouselItem.className.replace('left-edge', 'left-focus');
+		} else if(carouselItem.className.includes('left-focus')){
+			carouselItem.className= carouselItem.className.replace('left-focus','center-focus');
+		} else if(carouselItem.className == 'center-focus'){
+			carouselItem.className = 'right-focus';
+		} else if(carouselItem.className == 'right-focus'){
+			carouselItem.className = 'right-edge';
+		}
+	})
+};

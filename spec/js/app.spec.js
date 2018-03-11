@@ -51,4 +51,65 @@ describe('Portfolio JavaScript Testing', () => {
 			expect(testDiv2.className).toBe('hidden foo');		
 		})
 	})
+	describe('a carousel function that takes a nodelist and', () =>{
+		describe('when right nav button is clicked', () =>{
+			it("replaces 'left-edge' class name with 'left-focus'", () =>{
+				const underTest = carouselShift;
+				const carouselTestDiv1 = document.createElement('div');
+				carouselTestDiv1.className = 'carousel-item left-edge';
+				const carouselTestDiv2 = document.createElement('div');
+				carouselTestDiv2.className = 'carousel-item';
+				document.body.appendChild(carouselTestDiv1);
+				document.body.appendChild(carouselTestDiv2);
+				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
+				const testButton = document.createElement('div');
+				testButton.className = 'right-button';
+				underTest(carouselTestDivs, testButton);
+				expect(carouselTestDiv1.className).toBe('carousel-item left-focus');
+			});
+			it("replaces 'left-focus' class name with 'center-focus'", () =>{
+				const underTest = carouselShift;
+				const carouselTestDiv1 = document.createElement('div');
+				carouselTestDiv1.className = 'carousel-item left-focus';
+				const carouselTestDiv2 = document.createElement('div');
+				carouselTestDiv2.className = 'carousel-item';
+				document.body.appendChild(carouselTestDiv1);
+				document.body.appendChild(carouselTestDiv2);
+				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
+				const testButton = document.createElement('div');
+				testButton.className = 'right-button';
+				underTest(carouselTestDivs, testButton);
+				expect(carouselTestDiv1.className).toBe('carousel-item center-focus');
+			})
+
+
+			// const underTest = carouselShift;
+			// var carouselTestDiv1 = document.createElement('div');
+			// let carouselTestDiv2 = document.createElement('div');
+			// let carouselTestDiv3 = document.createElement('div');
+			// carouselTestDiv1.className ='carousel-item';
+			// carouselTestDiv2.className ='carousel-item';
+			// carouselTestDiv3.className ='carousel-item';
+			// document.body.appendChild(carouselTestDiv1)
+			// document.body.appendChild(carouselTestDiv2)
+			// document.body.appendChild(carouselTestDiv3)
+			// let carouselTestDivs=document.body.querySelectorAll('div.carousel-item');
+			// let testButton = document.createElement('div');
+			// testButton.className = 'right-button';
+			
+			
+			
+			// it("replaces 'center-focus' class name with 'right-focus'",()=>{
+			// 	carouselTestDiv1.className = 'center-focus';
+			// 	underTest(carouselTestDivs, testButton);
+			// 	expect(carouselTestDiv1.className).toBe('right-focus');
+			// })
+			// it("replaces 'right-focus' class name with 'right-edge'", () =>{
+			// 	carouselTestDiv1.className = 'right-focus';
+			// 	underTest(carouselTestDivs, testButton);
+			// 	expect(carouselTestDiv1.className).toBe('right-edge');
+			// })
+			
+		})
+	})
 })
