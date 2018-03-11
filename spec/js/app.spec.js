@@ -52,64 +52,183 @@ describe('Portfolio JavaScript Testing', () => {
 		})
 	})
 	describe('a carousel function that takes a nodelist and', () =>{
+		const underTest = carouselShift;
+		const carouselTestDiv1 = document.createElement('div');
+		const carouselTestDiv2 = document.createElement('div');
+		const testButton = document.createElement('div');
+		
 		describe('when right nav button is clicked', () =>{
+			
+			
 			it("replaces 'left-edge' class name with 'left-focus'", () =>{
-				const underTest = carouselShift;
-				const carouselTestDiv1 = document.createElement('div');
 				carouselTestDiv1.className = 'carousel-item left-edge';
-				const carouselTestDiv2 = document.createElement('div');
 				carouselTestDiv2.className = 'carousel-item';
+				testButton.className = 'right-button';
 				document.body.appendChild(carouselTestDiv1);
 				document.body.appendChild(carouselTestDiv2);
 				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
-				const testButton = document.createElement('div');
-				testButton.className = 'right-button';
+				
 				underTest(carouselTestDivs, testButton);
+				
 				expect(carouselTestDiv1.className).toBe('carousel-item left-focus');
 			});
+			
 			it("replaces 'left-focus' class name with 'center-focus'", () =>{
-				const underTest = carouselShift;
-				const carouselTestDiv1 = document.createElement('div');
 				carouselTestDiv1.className = 'carousel-item left-focus';
-				const carouselTestDiv2 = document.createElement('div');
 				carouselTestDiv2.className = 'carousel-item';
+				testButton.className = 'right-button';
 				document.body.appendChild(carouselTestDiv1);
 				document.body.appendChild(carouselTestDiv2);
 				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
-				const testButton = document.createElement('div');
-				testButton.className = 'right-button';
+			
 				underTest(carouselTestDivs, testButton);
+			
 				expect(carouselTestDiv1.className).toBe('carousel-item center-focus');
 			})
 
-
-			// const underTest = carouselShift;
-			// var carouselTestDiv1 = document.createElement('div');
-			// let carouselTestDiv2 = document.createElement('div');
-			// let carouselTestDiv3 = document.createElement('div');
-			// carouselTestDiv1.className ='carousel-item';
-			// carouselTestDiv2.className ='carousel-item';
-			// carouselTestDiv3.className ='carousel-item';
-			// document.body.appendChild(carouselTestDiv1)
-			// document.body.appendChild(carouselTestDiv2)
-			// document.body.appendChild(carouselTestDiv3)
-			// let carouselTestDivs=document.body.querySelectorAll('div.carousel-item');
-			// let testButton = document.createElement('div');
-			// testButton.className = 'right-button';
+			it("replaces 'center-focus' class name with 'right-focus'",()=>{
+				carouselTestDiv1.className = 'carousel-item center-focus';
+				carouselTestDiv2.className = 'carousel-item';
+				testButton.className = 'right-button';
+				document.body.appendChild(carouselTestDiv1);
+				document.body.appendChild(carouselTestDiv2);
+				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
 			
+				underTest(carouselTestDivs, testButton);
 			
+				expect(carouselTestDiv1.className).toBe('carousel-item right-focus');
+			})
+			it("replaces 'right-focus' class name with 'right-edge'", () =>{
+				carouselTestDiv1.className = 'carousel-item right-focus';
+				carouselTestDiv2.className = 'carousel-item';
+				testButton.className = 'right-button';
+				document.body.appendChild(carouselTestDiv1);
+				document.body.appendChild(carouselTestDiv2);
+				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
 			
-			// it("replaces 'center-focus' class name with 'right-focus'",()=>{
-			// 	carouselTestDiv1.className = 'center-focus';
-			// 	underTest(carouselTestDivs, testButton);
-			// 	expect(carouselTestDiv1.className).toBe('right-focus');
-			// })
-			// it("replaces 'right-focus' class name with 'right-edge'", () =>{
-			// 	carouselTestDiv1.className = 'right-focus';
-			// 	underTest(carouselTestDivs, testButton);
-			// 	expect(carouselTestDiv1.className).toBe('right-edge');
-			// })
+				underTest(carouselTestDivs, testButton);
 			
+				expect(carouselTestDiv1.className).toBe('carousel-item right-edge');
+			})
+			it("shifts class names to the right on four node list elements", () =>{
+				const carouselTestDiv3 = document.createElement('div');
+				const carouselTestDiv4 = document.createElement('div');
+				carouselTestDiv1.className = 'carousel-item right-focus';
+				carouselTestDiv2.className = 'carousel-item center-focus';
+				carouselTestDiv3.className = 'carousel-item left-focus';
+				carouselTestDiv4.className = 'carousel-item left-edge';
+				testButton.className = 'right-button';
+				document.body.appendChild(carouselTestDiv1);
+				document.body.appendChild(carouselTestDiv2);
+				document.body.appendChild(carouselTestDiv3);
+				document.body.appendChild(carouselTestDiv4);
+				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
+			
+				underTest(carouselTestDivs, testButton);
+			
+				expect(carouselTestDiv1.className).toBe('carousel-item right-edge');
+				expect(carouselTestDiv2.className).toBe('carousel-item right-focus');
+				expect(carouselTestDiv3.className).toBe('carousel-item center-focus');
+				expect(carouselTestDiv4.className).toBe('carousel-item left-focus');
+			})
+			it("takes the first element of two with a 'left-edge' class name and shifts only the first element", () =>{
+				carouselTestDiv1.className = 'carousel-item left-edge';
+				carouselTestDiv2.className = 'carousel-item left-edge';
+				testButton.className = 'right-button';
+				document.body.appendChild(carouselTestDiv1);
+				document.body.appendChild(carouselTestDiv2);
+				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
+				
+				underTest(carouselTestDivs, testButton);
+				
+				expect(carouselTestDivs[0].className).toBe('carousel-item left-focus');
+				expect(carouselTestDivs[1].className).toBe('carousel-item left-edge');
+			})
+			
+		})
+		describe('when left nav button is clicked', () =>{
+			it("replaces 'right-edge' class name with 'right-focus'", () =>{
+				testButton.className = 'left-button';
+				carouselTestDiv1.className = 'carousel-item right-edge';
+				carouselTestDiv2.className = 'carousel-item';
+				document.body.appendChild(carouselTestDiv1);
+				document.body.appendChild(carouselTestDiv2);
+				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
+			
+				underTest(carouselTestDivs, testButton);
+			
+				expect(carouselTestDiv1.className).toBe('carousel-item right-focus');
+			})
+			it("replaces 'right-focus' class name with 'center-focus'", () =>{
+				testButton.className = 'left-button';
+				carouselTestDiv1.className = 'carousel-item right-focus';
+				carouselTestDiv2.className = 'carousel-item';
+				document.body.appendChild(carouselTestDiv1);
+				document.body.appendChild(carouselTestDiv2);
+				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
+			
+				underTest(carouselTestDivs, testButton);
+			
+				expect(carouselTestDiv1.className).toBe('carousel-item center-focus');
+			})
+			it("replaces 'center-focus' class name with 'left-focus'", () =>{
+				testButton.className = 'left-button';
+				carouselTestDiv1.className = 'carousel-item center-focus';
+				carouselTestDiv2.className = 'carousel-item';
+				document.body.appendChild(carouselTestDiv1);
+				document.body.appendChild(carouselTestDiv2);
+				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
+			
+				underTest(carouselTestDivs, testButton);
+			
+				expect(carouselTestDiv1.className).toBe('carousel-item left-focus');
+			})
+			it("replaces 'left-focus' class name with 'left-edge'", () =>{
+				testButton.className = 'left-button';
+				carouselTestDiv1.className = 'carousel-item left-focus';
+				carouselTestDiv2.className = 'carousel-item';
+				document.body.appendChild(carouselTestDiv1);
+				document.body.appendChild(carouselTestDiv2);
+				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
+			
+				underTest(carouselTestDivs, testButton);
+			
+				expect(carouselTestDiv1.className).toBe('carousel-item left-edge');
+			})
+			it("shifts class names to the left on four node list elements", () =>{
+				const carouselTestDiv3 = document.createElement('div');
+				const carouselTestDiv4 = document.createElement('div');
+				carouselTestDiv1.className = 'carousel-item right-edge';
+				carouselTestDiv2.className = 'carousel-item right-focus';
+				carouselTestDiv3.className = 'carousel-item center-focus';
+				carouselTestDiv4.className = 'carousel-item left-focus';
+				testButton.className = 'left-button';
+				document.body.appendChild(carouselTestDiv1);
+				document.body.appendChild(carouselTestDiv2);
+				document.body.appendChild(carouselTestDiv3);
+				document.body.appendChild(carouselTestDiv4);
+				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
+			
+				underTest(carouselTestDivs, testButton);
+			
+				expect(carouselTestDiv1.className).toBe('carousel-item right-focus');
+				expect(carouselTestDiv2.className).toBe('carousel-item center-focus');
+				expect(carouselTestDiv3.className).toBe('carousel-item left-focus');
+				expect(carouselTestDiv4.className).toBe('carousel-item left-edge');
+			})
+			it("takes the first element of two with a 'right-edge' class name and shifts only the last element", () =>{
+				carouselTestDiv1.className = 'carousel-item right-edge';
+				carouselTestDiv2.className = 'carousel-item right-edge';
+				testButton.className = 'left-button';
+				document.body.appendChild(carouselTestDiv1);
+				document.body.appendChild(carouselTestDiv2);
+				const carouselTestDivs = document.body.querySelectorAll('.carousel-item');
+				
+				underTest(carouselTestDivs, testButton);
+				
+				expect(carouselTestDivs[1].className).toBe('carousel-item right-focus');
+				expect(carouselTestDivs[0].className).toBe('carousel-item right-edge');
+			})
 		})
 	})
 })
