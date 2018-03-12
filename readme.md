@@ -2,6 +2,7 @@
 
 ## Overview
 Our week 8 capstone project was to take our week 6 capstone project (see below) and update it with some JavaScript features.  After a week of learning JavaScript we are going to focus on how to modify the content of our portfolio with JavaScript and user input.
+![ver 2.0 screenshot](/version2.png)
 
 ## Tasks
 - [x] Add an image carousel.
@@ -32,7 +33,7 @@ Style, Formatting, and Code Quality|10
 
 Our week 6 capstone project asks us to create a portfolio website that can be shared with potential employers.  Focus is put on building a good structure, then adding style and layout with CSS.
 >Create a portfolio site highlighting your work that can be shared with potential employers. Focus first on building a good structure, then later style and lay out with with CSS.
-
+![ver 1.0 screenshot](/version1.png)
 ## Tasks
 - [x] First, set up your username.github.io site as per the instructions at https://pages.github.com.
 
