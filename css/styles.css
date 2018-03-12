@@ -41,11 +41,20 @@ h1 {
 .about-me em{
 	cursor:pointer;
 }
+.element-carousel button{
+	cursor:pointer;
+}
 .carousel-item{
   transition-property: width height background-color font-size left top transform -webkit-transformv color;
  transition: all 3s ease-in-out
 }
 .project-title {
 	font-size: 24px
+}
+.project-button{
+	cursor:pointer;
+}
+.screenshot{
+	cursor:pointer;
 }
 

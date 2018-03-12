@@ -47,3 +47,15 @@ function carouselShift(carouselItemList, directionButton){
 		}
 	}
 };
+function toggleMenu(element) {
+	if (element.querySelector('.project-button').textContent=='[+]'){
+		element.querySelector('.project-button').textContent='[-]';
+	} else {
+		element.querySelector('.project-button').textContent='[+]';
+	}
+	if(element.querySelector('.expandable').className.includes('hidden')){
+	element.querySelector('.hidden').className=element.querySelector('.hidden').className.replace('hidden','show');
+	}else{
+	element.querySelector('.show').className=element.querySelector('.show').className.replace('show','hidden');
+	}
+}

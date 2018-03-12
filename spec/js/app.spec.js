@@ -1,4 +1,88 @@
 describe('Portfolio JavaScript Testing', () => {
+	describe('a method that expands and collapses an element', () => {
+		const underTest= toggleMenu;
+		const testDiv = document.createElement('div');
+		const testButton = document.createElement('div');
+		const testExpandableDiv = document.createElement('div');
+		
+		it('changes the content of the button from \'[+]\' to \'[-]\'', () => {
+			const testButtonText = document.createTextNode('[+]');
+			testButton.appendChild(testButtonText);
+			testButton.className = 'project-button';
+			testDiv.appendChild(testButton);
+			document.body.appendChild(testDiv);
+			testExpandableDiv.className = 'expandable show';
+			testDiv.appendChild(testExpandableDiv);
+			
+			underTest(testDiv);
+			
+			let result=document.querySelector('.project-button').textContent;
+			expect(result).toBe('[-]');
+		})
+		it('changes the content of the button from \'[-]\' to \'[+]\'', () => {
+			const testButtonText = document.createTextNode('[-]');
+			testButton.appendChild(testButtonText);
+			testButton.className = 'project-button';
+			testDiv.appendChild(testButton);
+			document.body.appendChild(testDiv);
+			testExpandableDiv.className = 'expandable show';
+			testDiv.appendChild(testExpandableDiv);
+			
+			underTest(testDiv);
+			
+			let result=document.querySelector('.project-button').textContent;
+			expect(result).toBe('[+]');
+		})
+		it("toggles the class name of the expandble element from 'hidden' to 'show' while maintaining other class names", () => {
+			const testButtonText = document.createTextNode('[-]');
+			testButton.appendChild(testButtonText);
+			testDiv.appendChild(testExpandableDiv);
+			testDiv.appendChild(testButton);
+			document.body.appendChild(testDiv);
+			testButton.className = 'project-button';
+			testExpandableDiv.className = 'expandable hidden';
+			underTest(testDiv);
+			let result = testExpandableDiv.className;
+			expect(result).toBe('expandable show');
+		})
+		it("toggles the class name of the expandble element from 'hidden' to 'show' while maintaining other class names", () =>{
+			const testButtonText = document.createTextNode('[-]');
+			testButton.appendChild(testButtonText);
+			testDiv.appendChild(testExpandableDiv);
+			testDiv.appendChild(testButton);
+			document.body.appendChild(testDiv);
+			testButton.className = 'project-button';
+			testExpandableDiv.className = 'expandable show';
+			
+			underTest(testDiv);
+			let result = testExpandableDiv.className;
+			expect(result).toBe('expandable hidden');
+		})
+		it("toggles the class names without affecting other elements", () => {
+			const testDiv1 = document.createElement('div');
+			const testButton1 = document.createElement('div');
+			const testExpandableDiv1 = document.createElement('div');
+			const testDiv2 = document.createElement('div');
+			const testExpandableDiv2 = document.createElement('div');
+			const testButtonText = document.createTextNode('[-]');
+			testButton1.appendChild(testButtonText);
+			testDiv1.appendChild(testExpandableDiv1);
+			testDiv1.appendChild(testButton1);
+			document.body.appendChild(testDiv1);
+			testButton1.className = 'project-button';
+			testExpandableDiv1.className = 'expandable show';
+			testDiv2.appendChild(testExpandableDiv2);
+			document.body.appendChild(testDiv2);
+			testExpandableDiv2.className = 'expandable show';
+			underTest(testDiv1);
+			let result1 = testExpandableDiv1.className;
+			let result2 = testExpandableDiv2.className;
+			expect(result1).toBe('expandable hidden');
+			expect(result2).toBe('expandable show');
+			
+		})
+		
+	})
 	describe('a method that changes an element\'s visability', () => {
 		it('changes an element class from hidden to show', () =>{
 			//Arrange

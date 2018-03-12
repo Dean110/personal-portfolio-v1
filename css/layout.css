@@ -15,7 +15,7 @@
 header{
 	grid-column: 1/-1;
 	display: flex;	
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: flex-end;
 }
 
@@ -64,6 +64,7 @@ header{
 
 .about-picture img{
 	max-width: 100%;
+    width:100%;
     height: auto;
 }
 
@@ -78,16 +79,27 @@ header{
 	max-width:100%;
 }
 
-.element-carousel{
+.element-carousel.project-screenshots{
   display:grid;
   width:100%;
   grid-template-rows:;
-  grid-template-columns: 40px 0px 1fr 600px 1fr 0px 40px;
+  grid-template-columns: auto 0px 1fr 600px 1fr 0px auto;
   grid-gap:5px;
+}
+.element-carousel button{
+	background-color: lightgray;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height:100%;
 }
 .left-carousel-nav{
   grid-column: 1/2;
   grid-row:1/2;
+  z-index:3;
 }
 .left-edge{
   grid-column:4/5;
@@ -102,22 +114,30 @@ header{
   grid-column:4/5;
   grid-row:1/2;
   transform: scale(0.5) skewY(-16deg) translate(-650px);
-transform-origin: 0% 100%;
+	transform-origin: 0% 100%;
+  display:flex;
+  justify-content: center;
+  align-content: flex-start;
+z-index: 2;
 }
 .center-focus{
   grid-column:4/5;
   grid-row:1/2;
-  background-color:lightgray;
   z-index: 10;
   display:flex;
   justify-content: center;
   align-content: flex-start;
+z-index:4;
 }
 .right-focus{
   grid-column:4/5;
   grid-row:1/2;
   transform: scale(0.5) skewY(16deg) translate(650px);
 transform-origin: 100% 100%;
+display:flex;
+  justify-content: center;
+  align-content: flex-start;
+  z-index: 2;
 }
 .right-edge{
   grid-column:4/5;
@@ -130,19 +150,51 @@ transform-origin: 100% 100%;
 .right-carousel-nav{
   grid-column: 7/8;
   grid-row:1/2;
+  z-index:3;
+}
+.projects{
+	display:grid;
+	grid-template-columns: 1fr 2fr 1fr;
 }
 .project{
 	max-width:100%;
 	margin:5px;
+	grid-column: 2/3;
 	display: flex;
-	flex-direction: column;	
+	flex-direction: column;
+	z-index:4;	
 }
-
 .project-title{
 	/*grid-column: 1/-1;*/
 	display:flex;
 	justify-content: space-around;
 	align-items: :center;
+}
+.project-header .project-title{
+	display:flex;
+	justify-content: flex-start;
+	
+}
+.project-header a{
+	display:flex;
+	justify-content: center;	
+}
+.project-header .project-button{
+	display:flex;
+	justify-content: flex-end;	
+}
+.project-header{
+	width:100%;
+	display:grid;
+	grid-template-columns: 2fr 1fr 1fr;
+}
+
+.hidden{
+	opacity: 0;
+	max-height: 0px; 
+}
+.hidden *{
+	max-height: 0px;
 }
 .project-skills{
 	margin-top: 10px;
