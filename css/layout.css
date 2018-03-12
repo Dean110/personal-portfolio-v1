@@ -37,7 +37,7 @@ header{
 	grid-column: 1/-1;
 	display:grid;
 	grid-gap: 10px;
-	grid-template-rows:repeat(3, auto);
+	grid-template-rows:repeat(4, auto);
 }
 
 .about-me{
@@ -74,14 +74,63 @@ header{
 .skills{
 	grid-column:2;
 }
-
-.projects{
-	margin-top: 20px;
+.project-screenshots img {
 	max-width:100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	}
+}
 
+.element-carousel{
+  display:grid;
+  width:100%;
+  grid-template-rows:;
+  grid-template-columns: 40px 0px 1fr 600px 1fr 0px 40px;
+  grid-gap:5px;
+}
+.left-carousel-nav{
+  grid-column: 1/2;
+  grid-row:1/2;
+}
+.left-edge{
+  grid-column:4/5;
+  grid-row:1/2;
+  background-color:gray;
+  transform: scale(0.0) skewY(-32deg) translate(-800px);
+  transform-origin: 0% 100%;
+  z-index: -10;
+  
+}
+.left-focus{
+  grid-column:4/5;
+  grid-row:1/2;
+  transform: scale(0.5) skewY(-16deg) translate(-650px);
+transform-origin: 0% 100%;
+}
+.center-focus{
+  grid-column:4/5;
+  grid-row:1/2;
+  background-color:lightgray;
+  z-index: 10;
+  display:flex;
+  justify-content: center;
+  align-content: flex-start;
+}
+.right-focus{
+  grid-column:4/5;
+  grid-row:1/2;
+  transform: scale(0.5) skewY(16deg) translate(650px);
+transform-origin: 100% 100%;
+}
+.right-edge{
+  grid-column:4/5;
+  grid-row:1/2;
+  background-color:gray;
+  transform: scale(0.0) skewY(32deg) translate(800px);
+  transform-origin: 100% 100%;
+  z-index: -10;
+}
+.right-carousel-nav{
+  grid-column: 7/8;
+  grid-row:1/2;
+}
 .project{
 	max-width:100%;
 	margin:5px;
@@ -90,7 +139,7 @@ header{
 }
 
 .project-title{
-	grid-column: 1/-1;
+	/*grid-column: 1/-1;*/
 	display:flex;
 	justify-content: space-around;
 	align-items: :center;

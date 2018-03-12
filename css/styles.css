@@ -1,3 +1,6 @@
+* {
+	transition-duration: .6s;
+}
 a:link {
 	color:black;
 	text-decoration: none;
@@ -14,14 +17,17 @@ a:hover {
 ul {
 	list-style: none;
 }
-
-.nav-item.hidden{
+nav.hidden{
+	display:none;
+	visibility: hidden;
+}
+/*.nav-item.hidden{
 	visibility: hidden;
 }
 .nav-item.nav-link{
 	background-color: red;
 transition-duration: .2s;
-}
+}*/
 .container {
 	background-color: lightgrey;
 	font-family: 'Poppins', sans-serif;
@@ -32,7 +38,13 @@ h1 {
 	font-family: 'Krona One', sans-serif;
 	font-size: 48px;
 }
-
+.about-me em{
+	cursor:pointer;
+}
+.carousel-item{
+  transition-property: width height background-color font-size left top transform -webkit-transformv color;
+ transition: all 3s ease-in-out
+}
 .project-title {
 	font-size: 24px
 }

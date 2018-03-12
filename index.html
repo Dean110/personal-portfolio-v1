@@ -10,12 +10,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Krona+One|Poppins" rel="stylesheet">
 	<link href="./css/styles.css" rel="stylesheet">
 	<link href="./css/layout.css" rel="stylesheet">
+	<link href="./css/modal.css" rel="stylesheet">
 </head>
 
 
-<head>
-	
-</head>
 <body>
 	<div class="container">
 		<header>
@@ -32,7 +30,7 @@
 			</div>
 			<h1>Ben Williams</h1>
 		</header>
-		<nav class="header-nav">
+		<nav class="header-nav hidden">
 			<ul class="nav-links">
 				<li class="nav-link"><a href="#about-me">about</a></li>
 				<li class="nav-link"><a href="#projects">projects</a></li>
@@ -42,7 +40,8 @@
 			<article class="about-me" id="about-me">
 				<section class="ben-bio">
 					<h2>My name is Ben,</h2>
-					<p>I am software developement apprentice at We Can Code IT. It has been a long journey for me to get to this point.  Many years were spent in the kitchens of Columbus plying the trade of a journeyman chef. Before that I studied music at Ohio University. My background taught me the importance of practicing a skill until it becomes second nature. I believe that once you have mastered the basics of a skill you can focus on creativity. I work everyday to improve how I write code and to learn new things that will bring me one step closer to mastering the craft of software development.</p>
+					<p>I like computer coding and nachos. <a href="#openModal"><em>Click here for more...</em></a></p>
+					
 				</section>
 				<figure class="about-picture">
 					<img src="./images/ben-final.jpg" alt="A picture of Ben"/>
@@ -63,13 +62,42 @@
 				<section class="contact">You can browse my GitHub account at <a class="about-me-link" href="https://github.com/Dean110">https://github.com/Dean110</a> and my LinkedIn profile at <a class="about-me-link" href="https://linkedin.com/in/benjamin-williams-110">linkedin.com/in/benjamin-williams-110</a>.
 				</section>
 			</article>
-			<article class="projects" id="projects">
-				<section class="project project-1">
-					<h2 class="project-title">Virtual-Pets-Amok
+			<div class="element-carousel project-screenshots">
+				<section class="left-carousel-nav">
+					<button class="left-button">
+						<p>&lt;</p>
+					</button>
+				</section>
+				<section class="screenshot project-1-screenshot carousel-item center-focus">
+					<img src="images/virtual-pets-amok.png" alt="Project Screen Shot">
+				</section>
+				<section class="screenshot project-2-screenshot carousel-item left-focus">
+					<img src="images/virtual-pet-shelter.png" alt="Project Screen Shot">
+				</section>
+				<section class="screenshot project-3-screenshot carousel-item left-edge">
+					<img src="images/virtual-pet.png" alt="Project Screen Shot">
+				</section>				
+				<section class="screenshot project-4-screenshot carousel-item left-edge">
+					<img src="images/OverloadXLBurger.jpg" alt="Project Screen Shot">
+				</section>
+				<section class="right-carousel-nav">
+      				<button class="right-button">
+        				<p>&gt;</p>
+     				</button>
+     			</section>
+			</div>
+			<article class="projects element-carousel" id="projects">
+				<section class="left-carousel-nav">
+					<button class="left-button">
+						<p>&lt;</p>
+					</button>
+				</section>
+				<section class="project project-1 carousel-item center-focus">
+					<h3 class="project-title">Virtual-Pets-Amok
 						<a class="github-link" href="https://github.com/Dean110/virtual-pets-amok" target="_blank">
 							<img src="./images/GitHub32.png" alt="GitHub Icon"/>
 						</a>
-					</h2>
+					</h3>
 					<p class="project-description">Our week four focus was on OOP principles. We covered Polymorphism, Inheritance, and Encapsulation. Our project aims to test our knowledge of these topics by expanding on the previous two weeks work and building a shelter that has four different styles of virtual pets. Organic pets are joined by robotic brethern, cats and dogs are now making a mess of the shelter. Differences between cats and dogs are simple, you can walk dogs, cats use the litter box, and dogs stay in their cage. All pets will have a health attribute that diminishes according to cleanliness of their living area, if their happiness drops too low, or if they have other needs that have not been met.</p>
 					<ul class="project-skills">
 						<h4>Skills used:</h4>
@@ -79,7 +107,7 @@
 						<li class="project-skill">Team Collaboration</li>
 					</ul>
 				</section>
-				<section class="project project-2">
+				<section class="project project-2 carousel-item left-focus">
 					<h3 class="project-title">Virtual-Pet-Shelter
 						<a class="github-link" href="https://github.com/Dean110/virtual-pet-shelter" target="_blank">
 							<img src="./images/GitHub32.png" alt="GitHub Icon"/>
@@ -93,7 +121,7 @@
 						<li class="project-skill">Multiple Classes</li>
 					</ul>
 				</section>
-				<section class="project project-3">
+				<section class="project project-3 carousel-item left-edge">
 					<h3 class="project-title">Virtual-Pet
 						<a class="github-link" href="https://github.com/Dean110/virtual-pet" target="_blank">
 							<img src="./images/GitHub32.png" alt="GitHub Icon"/>
@@ -107,6 +135,11 @@
 						<li class="project-skill">Class Design</li>
 					</ul>
 				</section>
+				<section class="right-carousel-nav">
+      				<button class="right-button">
+        				<p>&gt;</p>
+     				</button>
+   				</section>
 			</article>
 		</section>		
 		<footer>
@@ -123,7 +156,16 @@
 			</section>
 			<section class="copyright">Copyright 2018</section>
 		</footer>
+		<div id="openModal" class="modalDialog">
+			<div>
+				<a href="#close" title="Close" class="close">X</a>
+				<h2>About me</h2>
+				<p>I am software developement apprentice at We Can Code IT. It has been a long journey for me to get to this point.  Many years were spent in the kitchens of Columbus plying the trade of a journeyman chef. Before that I studied music at Ohio University. My background taught me the importance of practicing a skill until it becomes second nature. I believe that once you have mastered the basics of a skill you can focus on creativity. I work everyday to improve how I write code and to learn new things that will bring me one step closer to mastering the craft of software development.</p>
+			</div>
+		</div>
+					
 		<script src="js/app.js"></script>
 		<script src="js/setup.js"></script>
-	</body>
-	</html>
+	</div>
+</body>
+</html>

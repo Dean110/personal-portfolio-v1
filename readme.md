@@ -11,12 +11,12 @@ Our week 8 capstone project was to take our week 6 capstone project (see below) 
 - [ ] Add a button and collapable description to your projects.
 	- [ ] When the button is clicked the descriptions expand.
 	- [ ] When the expanded description is clicked it collapses.
-- [ ] Create a modal box that pops up with your bio info when a button is pressed. 
+- [x] Create a modal box that pops up with your bio info when a button is pressed. 
 
 ## Rubric
 Category|Max Score
 --------|---------
-All previous requirements met|10
+- [ ] All previous requirements met|10
 Proper variable names and variable keywords|10
 Properly declared event listeners|10
 Proper function declaration|10
